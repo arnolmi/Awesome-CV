@@ -678,6 +678,10 @@
 	\langtypestyle{#1} & \langsetstyle{#2} \\
 }
 
+\newcommand*{\cvskillnorm}[2]{%
+        \langsetstyle{#2} \\
+}
+
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
