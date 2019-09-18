@@ -733,6 +733,20 @@
   \lettertextstyle{\@letteropening}
 }
 
+\newcommand*{\makelettertitlename}{%
+  \vspace{8.4mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \recipienttitlestyle{\@recipientname} & \letterdatestyle{\@letterdate}
+  \end{tabular*}
+  \ifthenelse{\isundefined{\@lettertitle}}
+    {}
+    {\lettertitlestyle{\@lettertitle} \\}
+  \lettertextstyle{\@letteropening}
+}
+
+
 % Define a closing of the cover letter
 % Usage: \makeletterclosing
 \newcommand*{\makeletterclosing}{%
